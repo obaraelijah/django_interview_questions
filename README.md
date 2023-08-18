@@ -2,8 +2,9 @@
 #### Difference between Flask and Django?
 
 #### What is  Django?
+Django is a Python-based free and open-source web framework that follows the model-template-view architectural pattern.It was also named after Django Reinhardt who was a jazz guitarist from the 1930s.<br>
 #### Which companies use Django?
-
+Pinterest, Instagram, Coursera, Udemy, Spotify, Youtube, Bitbucket, Mozilla,Eventbrite, Dropbox [others](https://stackshare.io/django
 #### What are the features of Django?
 
 #### How do you check the Django version installed in a PC?
