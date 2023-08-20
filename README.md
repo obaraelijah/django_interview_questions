@@ -72,13 +72,28 @@ To connect your project to this database, use the following commands:<br>
 ```python manage.py makemigrations``` (tells Django you have created/ changed your models)<br>
 ```python manage.py sqlmigrate <name of the app followed by the generated id>``` (sqlmigrate takes the migration names and returns their SQL)<br>
 #### What are the various files that are created when you create a Django Project? Explain briefly.
-
+After you create a project using the startproject command, the following files will be created: <br>
+| File Name  | Description |
+| :------------- | :---------- |
+| manage.py | A command-line utility that allows you to interact with your Django project |
+| __init__.py | An empty file that tells Python that the current directory should be considered as a Python package |
+| settings.py | Consists of the settings for the current project |
+| urls.py | Contains the URL’s for the current project |
+| wsgi.py | This is an entry-point for the web servers to serve the project you have created |
+<br>
 #### What are ‘Models’?
-
+Models are a single and definitive source for information about your data. It consists of all the essential fields and behaviors of the data you have stored. Often, each model will map to a single specific database table. <br>
+In Django, models serve as the abstraction layer that is used for structuring and manipulating your data. <br> 
+Django models are a subclass of the ```django.db.models.Model``` class and the attributes in the models represent database fields. <br>
 #### What are ‘views’?
-
+Django views serve the purpose of encapsulation.<br>
+They encapsulate the logic liable for processing a user’s request and for returning the response back to the user.<br> 
+Views in Django either return an HttpResponse or raise an exception such as Http404.<br> 
+HttpResponse contains the objects that consist of the content that is to be rendered to the user. Views can also be used to perform tasks such as read records from the database, delegate to the templates, generate a PDF file, etc.<br>
 #### What are ‘templates’?
-
+Django’s template layer renders the information to be presented to the user in a designer-friendly format. <br>
+Using templates, you can generate HTML dynamically. The HTML consists of both static as well as dynamic parts of the content. You can have any number of templates depending on the requirement of your project. It is also fine to have none of them.<br>
+Django has its own template system called the Django template language (DTL). Regardless of the backend, you can also load and render templates using Django’s standard admin.<br>
 #### What is the difference between a Project and an App?
 
 #### What are the different inheritance styles in Django?
