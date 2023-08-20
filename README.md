@@ -108,17 +108,37 @@ Django has three possible inheritance styles:<br>
 | Proxy models | Used if you only want to modify the Python-level behavior of a model, without changing the ‘models’ fields in any way |
 <br>
 #### What are static files
+Static files in Django are those files that serve the purpose of additional files such as the CSS, images or JavaScript files. These files are managed by ```django.contrib.staticfiles```. These files are created within the project app directory by creating a subdirectory named as static. <br>
 
 #### What are ‘signals’?
+Django includes a “signal dispatcher” which helps allow decoupled applications get notified when actions occur elsewhere in the framework.<br>
+Signals allow certain senders to notify a set of receivers that some action has taken place. They’re especially useful when many pieces of code may be interested in the same events.<br>
+Some of the signals are as follows:
+| Signal	| Description |
+| :-------- | :------- |
+| django.db.models.signals.pre_save   django.db.models.signals.post_save | Sent before or after a model’s save() method is called |
+| django.db.models.signals.pre_delete  django.db.models.signals.post_delete |Sent before or after a model’s delete() method or queryset’s delete() method is called |
+| django.db.models.signals.m2m_changed | Sent when a ManyToManyField on a model is changed.|
+| django.core.signals.request_started  django.core.signals.request_finished | Sent when Django starts or finishes an HTTP request.|
+<br>
 
+[Signals](https://docs.djangoproject.com/en/4.2/topics/signals/)
+
+<br>
 #### Briefly explain Django Field Class.
+Field’ is basically an abstract class that actually represents a column in the database table. <br>
+The Field class, is in turn, a subclass of  RegisterLookupMixin. In Django, these fields are used to create database tables (db_type()) which are used to map Python types to the database using ```get_prep_value()``` and vice versa using ```from_db_value()``` method. Therefore, fields are fundamental pieces in different Django APIs such as models and querysets.
 
 ####  How do you create a Django project?
-
+To create a Django project, cd into the directory where you would like to create your project and type the following command:<br>
+```django-admin startproject elijah . ```
+NOTE: Here, elijah is the name of the project. You can give any name that you desire.<br>
 #### What is mixin?
-
+Mixin is a type of multiple inheritance wherein you can combine behaviors and attributes of more than one parent class.<br>
+Mixins provide an excellent way to reuse code from multiple classes. For example, generic class-based views consist of a mixin called TemplateResponseMixin whose purpose is to define ```render_to_response()``` method. When this is combined with a class present in the View, the result will be a TemplateView class.<br>
+One drawback of using these mixins is that it becomes difficult to analyze what a child class is doing and which methods to override in case of its code being too scattered between multiple classes.
 #### What are sessions?
-
+The session framework lets you store and retrieve arbitrary data on a per-site-visitor basis. It stores data on the server side and abstracts the sending and receiving of cookies. Cookies contain a session ID – not the data itself unless you’re using the cookie based backend.
 #### What do you mean by context?
 
 #### When can you use iterators in Django ORM?
