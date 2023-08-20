@@ -95,9 +95,18 @@ Django’s template layer renders the information to be presented to the user in
 Using templates, you can generate HTML dynamically. The HTML consists of both static as well as dynamic parts of the content. You can have any number of templates depending on the requirement of your project. It is also fine to have none of them.<br>
 Django has its own template system called the Django template language (DTL). Regardless of the backend, you can also load and render templates using Django’s standard admin.<br>
 #### What is the difference between a Project and an App?
-
+An app is basically a Web Application that is created to do something for example, a database of student records. A project, on the other hand, is a collection of apps of some particular website. Therefore, a single project can consist of ‘n’ number of apps and a single app can be in multiple projects. <br>
+or <br>
+Django Project: The top-level container that holds settings, configurations, and multiple apps. It defines the overall structure of the application. <br>
+Django App: A modular component that focuses on a specific functionality within the application. Each app contains models, views, templates, and other components needed to implement that functionality. <br>
 #### What are the different inheritance styles in Django?
-
+Django has three possible inheritance styles:<br>
+| Inheritance style | 	Description |
+| :------------- | :---------- |
+| Abstract base classes | Used when you want to use the parent class to hold information that you don’t want to type for each child model. Here, the parent class is never used in solitude |
+| Multi-table inheritance | Used when you have to subclass an existing model and want each model to have its own database table |
+| Proxy models | Used if you only want to modify the Python-level behavior of a model, without changing the ‘models’ fields in any way |
+<br>
 #### What are static files
 
 #### What are ‘signals’?
