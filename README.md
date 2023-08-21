@@ -1,5 +1,6 @@
 # django_interview_questions
 #### Difference between Flask and Django?
+
 | Comparison Factor     | Django    | Flask   |
 | :------------- | :----------: | :----------- |
 |  Project Type | Supports Large Projects| Built for smaller projects |
@@ -10,18 +11,22 @@
 |Bootstrapping-tool |	Built-it|	Not available | 
 <br>
 Nb: Batteries are libraries and tools that are required for common use cases and ORM is the object relational mapping layer which is used to interact with other relational databases.<br>
+
 #### What is  Django?
 Django is a Python-based free and open-source web framework that follows the model-template-view architectural pattern.It was also named after Django Reinhardt who was a jazz guitarist from the 1930s.<br>
+
 #### Which companies use Django?
-Pinterest, Instagram, Coursera, Udemy, Spotify, Youtube, Bitbucket, Mozilla,Eventbrite, Dropbox [others](https://stackshare.io/django
+Pinterest, Instagram, Coursera, Udemy, Spotify, Youtube, Bitbucket, Mozilla,Eventbrite, Dropbox [others](https://stackshare.io/django)<br>
+
 #### What are the features of Django?
 SEO Optimized -as from the name it means that adding your website to the search engine such that it appears in the top results. This is because Django maintains the built website through URLs rather than the IP addresses on the server, which makes it easy for SEO engineers to add the website to the server while the web-developer doesn’t have to convert the URL into some numeric code.<br>
 Rapid Development -Django was designed with the intention to make a framework which takes less time to build web application. The project implementation phase is takes time  but Django creates it rapidly.<br>
 Fully loaded framework -Django includes various helping task modules and libraries which can be used to handle common Web development tasks. Django takes care of user authentication, content administration, site maps, RSS feeds etc.<br>
-High security -tDjango includes built-in security features such as protection against cross-site scripting (XSS), cross-site request forgery (CSRF), and SQL injection attacks. It encourages secure development practices
+High security -thereby helping developers avoid common security mistakes such as cross-site request forgery (csrf), clickjacking, cross-site scripting, etc
 It is exceptionally scalable which in turn helps meet the heaviest traffic demands<br>
 Versatile -The logical project structure and MVT architecture of Django provides us with a solid foundation which can then be used to make whichever application we want to create.<br>
 Scalability -Django is scalable in nature and has ability to quickly and flexibly switch from small to large scale application project.<br>
+
 #### How do you check the Django version installed in a PC?
 Open CMD command prompt and type python -m django --version <br> 
 You can also try to import Django and use the get_version() method as follows:<br>
@@ -32,12 +37,13 @@ print(django.get_version())
 #### What are the advantages of using Django?
 Django is called a loosely coupled framework because of its Model View Template architecture. It helps in separating the server code from the client-related code. <br>
 Django’s models and views take care of the code that needs to be run on the server like getting records from database, etc., and the templates are mostly HTML and CSS that just need data from models passed in by the views to render them. Since these components are independent of each other, Django is called a loosely coupled framework.<br>
-Allows rapid development of websites.Django's "batteries-included" approach provides a wide range of built-in tools and features, allowing developers to focus on building features rather than reinventing the wheel. This speeds up the development process.<br>
-Follows the DRY or the Don’t Repeat Yourself Principle which means, one concept or a piece of data should live in just one place. This leads to cleaner and more maintainable code as well as reduces the chances of inconsistencies.<br>
+Allows rapid development of websites.<br>
+Follows the DRY or the Don’t Repeat Yourself Principle which means, one concept or a piece of data should live in just one place.<br>
 Consistent at low as well as high levels.<br>
 SQL statements are not executed too many times and are optimized internally.<br>
 Can easily drop into raw SQL whenever required.<br>
 Flexibility while using URL’s.<br>
+
 #### Explain Django architecture? 
 Django follows the MVT (Model View Template architecture) which is based on the MVC (Model View Controller architecture). The main difference between these two is that Django itself takes care of the controller part.<br>
 <img src="https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/mvt.png">
@@ -71,6 +77,7 @@ To connect your project to this database, use the following commands:<br>
 ```python manage.py migrate ``` (migrate command looks at the INSTALLED_APPS settings and creates database tables accordingly) <br>
 ```python manage.py makemigrations``` (tells Django you have created/ changed your models)<br>
 ```python manage.py sqlmigrate <name of the app followed by the generated id>``` (sqlmigrate takes the migration names and returns their SQL)<br>
+
 #### What are the various files that are created when you create a Django Project? Explain briefly.
 After you create a project using the startproject command, the following files will be created: <br>
 | File Name  | Description |
@@ -81,24 +88,26 @@ After you create a project using the startproject command, the following files w
 | urls.py | Contains the URL’s for the current project |
 | wsgi.py | This is an entry-point for the web servers to serve the project you have created |
 <br>
+
 #### What are ‘Models’?
 Models are a single and definitive source for information about your data. It consists of all the essential fields and behaviors of the data you have stored. Often, each model will map to a single specific database table. <br>
 In Django, models serve as the abstraction layer that is used for structuring and manipulating your data. <br> 
 Django models are a subclass of the ```django.db.models.Model``` class and the attributes in the models represent database fields. <br>
+
 #### What are ‘views’?
 Django views serve the purpose of encapsulation.<br>
 They encapsulate the logic liable for processing a user’s request and for returning the response back to the user.<br> 
 Views in Django either return an HttpResponse or raise an exception such as Http404.<br> 
 HttpResponse contains the objects that consist of the content that is to be rendered to the user. Views can also be used to perform tasks such as read records from the database, delegate to the templates, generate a PDF file, etc.<br>
+
 #### What are ‘templates’?
 Django’s template layer renders the information to be presented to the user in a designer-friendly format. <br>
 Using templates, you can generate HTML dynamically. The HTML consists of both static as well as dynamic parts of the content. You can have any number of templates depending on the requirement of your project. It is also fine to have none of them.<br>
 Django has its own template system called the Django template language (DTL). Regardless of the backend, you can also load and render templates using Django’s standard admin.<br>
+
 #### What is the difference between a Project and an App?
 An app is basically a Web Application that is created to do something for example, a database of student records. A project, on the other hand, is a collection of apps of some particular website. Therefore, a single project can consist of ‘n’ number of apps and a single app can be in multiple projects. <br>
-or <br>
-Django Project: The top-level container that holds settings, configurations, and multiple apps. It defines the overall structure of the application. <br>
-Django App: A modular component that focuses on a specific functionality within the application. Each app contains models, views, templates, and other components needed to implement that functionality. <br>
+
 #### What are the different inheritance styles in Django?
 Django has three possible inheritance styles:<br>
 | Inheritance style | 	Description |
@@ -107,7 +116,8 @@ Django has three possible inheritance styles:<br>
 | Multi-table inheritance | Used when you have to subclass an existing model and want each model to have its own database table |
 | Proxy models | Used if you only want to modify the Python-level behavior of a model, without changing the ‘models’ fields in any way |
 <br>
-#### What are static files
+
+#### What are static files?
 Static files in Django are those files that serve the purpose of additional files such as the CSS, images or JavaScript files. These files are managed by ```django.contrib.staticfiles```. These files are created within the project app directory by creating a subdirectory named as static. <br>
 
 #### What are ‘signals’?
@@ -122,28 +132,33 @@ Some of the signals are as follows:
 | django.core.signals.request_started  django.core.signals.request_finished | Sent when Django starts or finishes an HTTP request.|
 <br>
 
-[Signals](https://docs.djangoproject.com/en/4.2/topics/signals/)
+[Signals](https://docs.djangoproject.com/en/3.0/topics/signals/)
 
 <br>
+
 #### Briefly explain Django Field Class.
-Field’ is basically an abstract class that actually represents a column in the database table. <br>
+‘Field’ is basically an abstract class that actually represents a column in the database table. <br>
 The Field class, is in turn, a subclass of  RegisterLookupMixin. In Django, these fields are used to create database tables (db_type()) which are used to map Python types to the database using ```get_prep_value()``` and vice versa using ```from_db_value()``` method. Therefore, fields are fundamental pieces in different Django APIs such as models and querysets.
 
 ####  How do you create a Django project?
 To create a Django project, cd into the directory where you would like to create your project and type the following command:<br>
-```django-admin startproject elijah . ```
-NOTE: Here, elijah is the name of the project. You can give any name that you desire.<br>
+```django-admin startproject Vee ```
+NOTE: Here, Vee is the name of the project. You can give any name that you desire.<br>
+
 #### What is mixin?
 Mixin is a type of multiple inheritance wherein you can combine behaviors and attributes of more than one parent class.<br>
 Mixins provide an excellent way to reuse code from multiple classes. For example, generic class-based views consist of a mixin called TemplateResponseMixin whose purpose is to define ```render_to_response()``` method. When this is combined with a class present in the View, the result will be a TemplateView class.<br>
 One drawback of using these mixins is that it becomes difficult to analyze what a child class is doing and which methods to override in case of its code being too scattered between multiple classes.
+
 #### What are sessions?
 The session framework lets you store and retrieve arbitrary data on a per-site-visitor basis. It stores data on the server side and abstracts the sending and receiving of cookies. Cookies contain a session ID – not the data itself unless you’re using the cookie based backend.
+
 #### What do you mean by context?
 When you use a Django Template, it is compiled once (and only once) and stored for future use, as an optimization. A template can have variable names in double curly braces, such as {{ myvar1 }} and {{ myvar2 }}.<br>
 A Context is a dictionary with variable names as the key and their values as the value. Hence, if your context for the above template looks like: {myvar1: 101, myvar2: 102}, when you pass this context to the template render method, {{ myvar1 }} would be replaced with 101 and {{ myvar2 }} with 102 in your template. This is a simplistic example, but really a Context object is the context in which the template is being rendered.<br>
 As for a ContextProcessor, that is a slightly advanced concept. You can have in your settings.py file listed a few Context Processors which take in an HttpRequest object and return a dictionary (similar to the Context object above). The dictionary (context) returned by the Context Processor is merged into the context passed in by you (the user) by Django.<br>
 A use case for a Context Processor is when you always want to insert certain variables inside your template (for example the location of the user could be a candidate). Instead of writing code to insert it in each view, you could simply write a context processor for it and add it to the TEMPLATE_CONTEXT_PROCESSORS settings in settings.py.<br>
+
 #### When can you use iterators in Django ORM?
 Iterators in Python are basically containers that consist of a countable number of elements.<br>
 Any object that is an iterator implements two methods which are, the __init__() and the __next__()  methods. <br>
@@ -161,6 +176,7 @@ Some of the caching strategies of Django are listed below:<br>
 | Local-memory caching | This is actually the default cache in case you have not specified any other. This type of cache is per-process and thread-safe as well |
 | Database caching | Cache data will be stored in the database and works very well if you have a fast and well-indexed database server|
 <br>
+
 #### Explain the use of Middlewares in Django?
 Middleware is a framework that is light and low-level plugin system for altering Django’s input and output globally. <br>
 It's a framework of hooks into the request/ response processing of Django. <br>
@@ -174,12 +190,14 @@ It does the same things as django-admin but along with that, it also sets the DJ
 #### Explain the use of ‘migrate’ command in Django?
 In Django, migrations are used to propagate changes made to the models.The migrate command is basically used to apply or unapply migrations changes made to the models.<br>
 This command synchronizes the current set of models and migrations with the database state. You can use this command with or without parameters. In case you do not specify any parameter, all apps will have all their migrations running.<br>
+
 #### How to view and filter items from the database?
 In order to view all the items from your database, you can make use of the ‘all()’ function in your interactive shell as follows:
 ```XYZ.objects.all()```    where XYZ is some class that you have created in your models.<br>
 To filter out some element from your database, you either use the get() method or the filter method as follows:<br>
 ```XYZ.objects.filter(pk=1)```
 ```XYZ.objects.get(id=1)```
+
 
 
 #### Explain how a request is processed in Django?
