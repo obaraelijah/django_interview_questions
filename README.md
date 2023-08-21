@@ -162,12 +162,24 @@ Some of the caching strategies of Django are listed below:<br>
 | Database caching | Cache data will be stored in the database and works very well if you have a fast and well-indexed database server|
 <br>
 #### Explain the use of Middlewares in Django?
+Middleware is a framework that is light and low-level plugin system for altering Django’s input and output globally. <br>
+It's a framework of hooks into the request/ response processing of Django. <br>
+Each component in middleware has some particular task. For example, the AuthenticationMiddleware is used to associate users with requests using sessions. Django provides many other middlewares such as cache middleware to enable site-wide cache, common middleware that performs many tasks such as forbidding access to user agents, URL rewriting, etc, GZip middleware which is used to compress the content for browsers, etc.<br>
 
 #### What is the significance of manage.py file in Django?
+The manage.py file is automatically generated whenever you create a project.<br>
+This is basically a command-line utility that helps you to interact with your Django project in various ways. <br>
+It does the same things as django-admin but along with that, it also sets the DJANGO_SETTINGS_MODULE environment variable in order to point to your project’s settings. Usually, it is better to make use of manage.py rather than the django-admin in case you are working on a single project.<br>
 
 #### Explain the use of ‘migrate’ command in Django?
-
+In Django, migrations are used to propagate changes made to the models.The migrate command is basically used to apply or unapply migrations changes made to the models.<br>
+This command synchronizes the current set of models and migrations with the database state. You can use this command with or without parameters. In case you do not specify any parameter, all apps will have all their migrations running.<br>
 #### How to view and filter items from the database?
+In order to view all the items from your database, you can make use of the ‘all()’ function in your interactive shell as follows:
+```XYZ.objects.all()```    where XYZ is some class that you have created in your models.<br>
+To filter out some element from your database, you either use the get() method or the filter method as follows:<br>
+```XYZ.objects.filter(pk=1)```
+```XYZ.objects.get(id=1)```
 
 
 #### Explain how a request is processed in Django?
