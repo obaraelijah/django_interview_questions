@@ -256,6 +256,7 @@ def hello_world(request):
     return HttpResponse(html)
   ``` 
   <br>
+  
 #### What should be done in case you get a message saying “Please enter the correct username and password” even after entering the right details to log in to the admin section?
 In case you have entered the right details and still not able to login to the admin site, cross verify if the user account has is_active and is_staff attributes set to True.<The admin site allows only those users for whom these values are set to True.<br>
 
@@ -281,6 +282,7 @@ from django.db import connection
 connection.queries
 ```
 <br>
+
 #### Is it mandatory to use the model/ database layer?
 No. The model/ database layer is actually decoupled from the rest of the framework.<br>
 
