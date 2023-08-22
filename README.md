@@ -198,16 +198,25 @@ To filter out some element from your database, you either use the get() method o
 ```XYZ.objects.filter(pk=1)```
 ```XYZ.objects.get(id=1)```
 
-
-
 #### Explain how a request is processed in Django?
+In case a user requests a page from some Django powered site, the system follows an algorithm that determines which Python code needs to be executed.<br>
+Here are the steps that sum up the algorithm:<br>
+-Django first determines which root URLconf or URL configuration module is to be used<br>
+-Then, that particular Python module is loaded and then Django looks for the variable urlpatterns<br>
+-These URL patterns are then run by Django, and it stops at the first match of the requested URL<br>
+-Once that is done, the Django then imports and calls the given view<br>
+-In case none of the URLs match the requested URL, Django invokes an error-handling view<br>
 
 #### How did Django come into existence?
+Django basically grew from a very practical need. World Online developers namely Adrian Holovaty and Simon Willison started using Python to develop its websites. As they went on building intensive, richly interactive sites, they began to pull out a generic Web development framework that allowed them to build Web applications more and more quickly. In summer 2005, World Online decided to open-source the resulting software, which is, Django.<br>
 
 #### How to use file-based sessions?
-
+In order to make use of file-based sessions, you will need to set the SESSION_ENGINE setting to “django.contrib.sessions.backends.file”.<br>
 #### Explain the Django URLs in brief?
-
+Django allows you to design your own URLs however you like. The aim is to maintain a clean URL scheme without any framework limitations.<br>
+In order to create URLs for your app, you will need to create a Python module informally called the URLconf or URL configuration which is pure Python code and is also a mapping between the URL path expressions to the Python methods.<br>
+The length of this mapping can be as long or short as required and can also reference other mappings.<br>
+When processing a request, the requested URL is matched with the URLs present in the urls.py file and the corresponding view is retrieved.<br>
 #### Give the exception classes present in Django?
 
 #### Does the Django framework scale?
